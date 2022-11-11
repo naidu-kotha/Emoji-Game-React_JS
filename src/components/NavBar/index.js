@@ -9,10 +9,10 @@ const NavBar = props => {
       <div className="nav-container">
         <img
           src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
-          alt="emoji-logo"
+          alt="emoji logo"
           className="emoji-logo"
         />
-        <p className="title">Emoji Game</p>
+        <h1 className="title">Emoji Game</h1>
       </div>
       {isGameOn ? (
         <div className="nav-container">

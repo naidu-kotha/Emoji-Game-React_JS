@@ -47,17 +47,20 @@ class EmojiGame extends Component {
 
   onClickEmoji = id => {
     const {clickedList} = this.state
-    // const {emojisList} = this.props
+    const {emojisList} = this.props
     const isEmojiPresent = clickedList.includes(id)
     const clickedEmojisListLength = clickedList.length
 
     if (isEmojiPresent) {
       this.finishGameAndSetTopScore(clickedEmojisListLength)
+    } else {
+      if (emojisList.length - 1 === clickedEmojisListLength) {
+        this.finishGameAndSetTopScore(emojisList.length)
+      }
+      this.setState(prevState => ({
+        clickedList: [...prevState.clickedList, id],
+      }))
     }
-
-    this.setState(prevState => ({
-      clickedList: [...prevState.clickedList, id],
-    }))
   }
 
   shuffledEmojisList = () => {

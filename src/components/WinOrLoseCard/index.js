@@ -15,7 +15,7 @@ const WinOrLoseCard = props => {
   return (
     <div className="card-bg">
       <div className="img-container">
-        <img src={img} alt="win" className="result-img" />
+        <img src={img} alt="win or lose" className="result-img" />
       </div>
       <div className="text-container">
         <h1 className="won">{gameResult}</h1>
